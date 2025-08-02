@@ -1,0 +1,90 @@
+﻿@model IEnumerable<HR.Models.Employee>
+
+@{
+    ViewBag.Title = "Employee List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .table thead th {
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+    }
+
+    .table tbody td {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .action-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+        .action-links a {
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+            .action-links a.edit {
+                color: #007bff;
+            }
+
+            .action-links a.details {
+                color: #28a745;
+            }
+
+            .action-links a.delete {
+                color: #dc3545;
+            }
+
+    h2.title {
+        font-weight: 700;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: #2c3e50;
+    }
+</style>
+
+<div class="container-fluid" style="padding-left: 80px; padding-right: 80px;">
+    <h2 class="title">Employee List</h2>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Job Title</th>
+                <th>Department</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Join Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FullName</td>
+                    <td>@item.JobTitle</td>
+                    <td>@item.Department</td>
+                    <td>@item.DateOfBirth</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.JoinDate</td>
+                    <td class="action-links">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "edit" })
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "details" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "delete" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

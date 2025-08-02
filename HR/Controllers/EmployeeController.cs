@@ -1,5 +1,6 @@
 ﻿using HR.Models;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.Mvc;
 
@@ -56,11 +57,51 @@ namespace HR.Controllers
                 System.Diagnostics.Debug.WriteLine(ex.Message);
                 
             }
-            // database insert code...
+            
             TempData["Success"] = "Employee saved successfully!";
             return RedirectToAction("NewEmployee"); // so form clears
 
           
         }
+
+
+
+        public ActionResult EmployeeShow()
+        {
+            List<Employee> list = new List<Employee>();
+
+            string connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=dbERP;User ID=mh;Password=123456";
+            string query = "SELECT * FROM employeeInformation";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Employee emp = new Employee
+                    {
+                        Id = Convert.ToInt32(reader["Id"]),
+                        FullName = reader["Name"].ToString(),
+                        JobTitle = reader["JobTitle"].ToString(),
+                        Department = reader["Department"].ToString(),
+                        DateOfBirth = reader["DateOfBirth"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Address = reader["Address"].ToString(),
+                        JoinDate = reader["JoinDate"].ToString()
+                    };
+                    list.Add(emp);
+                }
+            }
+
+            return View("EmployeeShow", list);
+        }
+
+
     }
+
+
 }

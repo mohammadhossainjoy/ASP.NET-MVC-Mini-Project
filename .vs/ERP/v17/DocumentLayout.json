@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|c:\\asp.net 3 dots\\mvc\\erp\\hr\\views\\employee\\newemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|C:\\ASP.NET 3 Dots\\MVC\\ERP\\hr\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|C:\\ASP.NET 3 Dots\\MVC\\ERP\\hr\\views\\employee\\employeeshow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\views\\employee\\employeeshow.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|C:\\ASP.NET 3 Dots\\MVC\\ERP\\hr\\views\\employee\\newemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\views\\employee\\newemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -15,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|c:\\asp.net 3 dots\\mvc\\erp\\hr\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|C:\\ASP.NET 3 Dots\\MVC\\ERP\\hr\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -25,24 +33,33 @@
     {
       "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|C:\\ASP.NET 3 Dots\\MVC\\ERP\\hr\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|C:\\ASP.NET 3 Dots\\MVC\\ERP\\hr\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9BD2C8BD-B33C-4DC8-97BC-5845D64BBD0C}|HR\\HR.csproj|solutionrelative:hr\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
-      "VerticalTabListWidth": 100,
+      "VerticalTabListWidth": 216,
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "EmployeeShow.cshtml",
+              "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Employee\\EmployeeShow.cshtml",
+              "RelativeDocumentMoniker": "HR\\Views\\Employee\\EmployeeShow.cshtml",
+              "ToolTip": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Employee\\EmployeeShow.cshtml",
+              "RelativeToolTip": "HR\\Views\\Employee\\EmployeeShow.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAADwv1cAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-31T19:29:30.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Web.config",
               "RelativeDocumentMoniker": "HR\\Views\\Web.config",
@@ -50,50 +67,49 @@
               "RelativeToolTip": "HR\\Views\\Web.config",
               "ViewState": "AgIAABsAAAAAAAAAAAAIwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-07-31T17:43:28.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:43:28.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NewEmployee.cshtml",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Employee\\NewEmployee.cshtml",
               "RelativeDocumentMoniker": "HR\\Views\\Employee\\NewEmployee.cshtml",
               "ToolTip": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Employee\\NewEmployee.cshtml",
               "RelativeToolTip": "HR\\Views\\Employee\\NewEmployee.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAwDgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAHkAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-31T17:33:58.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "HR\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "HR\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAwGcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T10:21:04.401Z"
+              "WhenOpened": "2025-07-30T10:21:04.401Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "HR\\Models\\Employee.cs",
               "ToolTip": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Models\\Employee.cs",
               "RelativeToolTip": "HR\\Models\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T09:40:15.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T09:40:15.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "HR\\App_Start\\RouteConfig.cs",
@@ -105,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Web.config",
               "RelativeDocumentMoniker": "HR\\Web.config",
@@ -118,13 +134,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "HR\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\ASP.NET 3 Dots\\MVC\\ERP\\HR\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "HR\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAkwDoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAgwFMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T09:21:12.774Z",
               "EditorCaption": ""

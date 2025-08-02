@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Overall page background -->
+<!-- Full page background -->
 <style>
     body {
         background-color: #f5f8fa;
@@ -112,10 +112,21 @@
                 </div>
             </div>
 
+            @*<div class="text-center mt-4">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>*@
+
             <div class="text-center mt-4">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary px-4">Create</button>
+
+                <a href="@Url.Action("EmployeeShow", "Employee")" class="btn btn-success px-4" style="height: 55px; line-height: 26px; vertical-align: middle;">
+                    Show
+                </a>
             </div>
-          
+
+
+
+
             @if (TempData["Success"] != null)
             {
                 <div class="alert alert-success text-center mt-3 p-2" style="font-size: 15px;">
@@ -125,9 +136,7 @@
         </div>
             }
 
-            <div class="text-center mt-4">
-                @Html.ActionLink("Back to Home", "Index", "Home", null, new { @class = "btn btn-link" })
-            </div>
+            
 
         </div>
     </div>
