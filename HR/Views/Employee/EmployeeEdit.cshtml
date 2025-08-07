@@ -1,0 +1,71 @@
+﻿@model HR.Models.Employee
+
+@{
+    ViewBag.Title = "Edit Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <h2 class="text-center mb-4">Edit Employee</h2>
+
+            @using (Html.BeginForm("EditEmployee", "Employee", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="border rounded p-4 bg-light">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.FullName)
+                            @Html.EditorFor(m => m.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.JobTitle)
+                            @Html.EditorFor(m => m.JobTitle, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.Department)
+                            @Html.EditorFor(m => m.Department, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.DateOfBirth)
+                            @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control", type = "date" })
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.Email)
+                            @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.Phone)
+                            @Html.EditorFor(m => m.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.Address)
+                            @Html.EditorFor(m => m.Address, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(m => m.JoinDate)
+                            @Html.TextBoxFor(m => m.JoinDate, new { @class = "form-control", type = "date" })
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <input type="submit" value="Update" class="btn btn-success px-4" />
+                        @Html.ActionLink("Back", "EmployeeShow", "Employee", null, new { @class = "btn btn-secondary ms-2 px-4" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

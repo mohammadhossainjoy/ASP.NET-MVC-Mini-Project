@@ -78,10 +78,10 @@
                     @Html.LabelFor(model => model.Department)
                     @Html.DropDownListFor(model => model.Department, new SelectList(new[]
                     {
-                        new { Value = "HR", Text = "HR" },
-                        new { Value = "IT", Text = "IT" },
-                        new { Value = "Finance", Text = "Finance" },
-                        new { Value = "Marketing", Text = "Marketing" }
+                        new { Value = "1", Text = "HR" },
+                        new { Value = "2", Text = "IT" },
+                        new { Value = "3", Text = "Finance" },
+                        new { Value = "4", Text = "Marketing" }
                     }, "Value", "Text"), "-- Select Department --", new { @class = "form-control" })
                 </div>
                 <div class="col-md-6 mb-3">

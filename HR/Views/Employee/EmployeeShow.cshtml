@@ -85,9 +85,11 @@
                     <td>@item.Address</td>
                     <td>@item.JoinDate</td>
                     <td class="action-links">
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "edit" })
-                        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "details" })
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "delete" })
+                        @Html.ActionLink("Edit", "EditEmployee", "Employee", new { id = item.Id }, new { @class = "edit" })
+                        @Html.ActionLink("Details", "Details", "Employee", new { id = item.Id }, new { @class = "details" })
+                        @Html.ActionLink("Delete", "DeleteEmployee", "Employee", new { id = item.Id }, new { @class = "delete" })
+
+
                     </td>
                 </tr>
             }

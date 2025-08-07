@@ -64,7 +64,7 @@ namespace HR.Controllers
           
         }
 
-
+        //Employee Show
 
         public ActionResult EmployeeShow()
         {
@@ -100,8 +100,163 @@ namespace HR.Controllers
             return View("EmployeeShow", list);
         }
 
+        //Edit
+        // GET :Edit
+        public ActionResult EditEmployee(int id)
+        {
+            Employee emp = new Employee();
+
+            try
+            {
+                string connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=dbERP;User ID=mh;Password=123456";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "SELECT * FROM employeeInformation WHERE Id = @Id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        emp.Id = Convert.ToInt32(reader["Id"]);
+                        emp.FullName = reader["Name"].ToString();
+                        emp.JobTitle = reader["JobTitle"].ToString();
+                        emp.Department = reader["Department"].ToString();
+                        emp.DateOfBirth = reader["DateOfBirth"].ToString();
+                        emp.Email = reader["Email"].ToString();
+                        emp.Phone = reader["Phone"].ToString();
+                        emp.Address = reader["Address"].ToString();
+                        emp.JoinDate = reader["JoinDate"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error loading employee: " + ex.Message);
+            }
+
+            return View("EmployeeEdit", emp); // View name: EmployeeEdit.cshtml
+        }
+
+        // POST: Employee/Edit
+        [HttpPost]
+        public ActionResult EditEmployee(Employee emp)
+        {
+            try
+            {
+                string connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=dbERP;User ID=mh;Password=123456";
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = @"UPDATE employeeInformation SET 
+                        Name = @Name, JobTitle = @JobTitle, Department = @Department,
+                        DateOfBirth = @DOB, Email = @Email, Phone = @Phone,
+                        Address = @Address, JoinDate = @JoinDate 
+                        WHERE Id = @Id";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Id", emp.Id);
+                    cmd.Parameters.AddWithValue("@Name", emp.FullName);
+                    cmd.Parameters.AddWithValue("@JobTitle", emp.JobTitle);
+                    cmd.Parameters.AddWithValue("@Department", emp.Department);
+                    cmd.Parameters.AddWithValue("@DOB", emp.DateOfBirth);
+                    cmd.Parameters.AddWithValue("@Email", emp.Email);
+                    cmd.Parameters.AddWithValue("@Phone", emp.Phone);
+                    cmd.Parameters.AddWithValue("@Address", emp.Address);
+                    cmd.Parameters.AddWithValue("@JoinDate", emp.JoinDate);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+
+               
+                return RedirectToAction("EmployeeShow");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Update Error: " + ex.Message);
+                return View("EmployeeEdit", emp); // Show form again with same data
+            }
+        }
+
+
+
+
+
+        //Delete
+        //Get 
+        public ActionResult DeleteEmployee(int id)
+        {
+            try
+            {
+                string connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=dbERP;User ID=mh;Password=123456";
+
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "DELETE FROM employeeInformation WHERE Id = @Id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+
+              
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Delete Error: " + ex.Message);
+              
+            }
+
+            return RedirectToAction("EmployeeShow");
+        }
+
+
+
+        // GET: Employee Details
+        public ActionResult Details(int id)
+        {
+            Employee emp = new Employee();
+
+            try
+            {
+                string connStr = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=dbERP;User ID=mh;Password=123456";
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "SELECT * FROM employeeInformation WHERE Id = @Id";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        emp.Id = Convert.ToInt32(reader["Id"]);
+                        emp.FullName = reader["Name"].ToString();
+                        emp.JobTitle = reader["JobTitle"].ToString();
+                        emp.Department = reader["Department"].ToString();
+                        emp.DateOfBirth = reader["DateOfBirth"].ToString();
+                        emp.Email = reader["Email"].ToString();
+                        emp.Phone = reader["Phone"].ToString();
+                        emp.Address = reader["Address"].ToString();
+                        emp.JoinDate = reader["JoinDate"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Error loading details: " + ex.Message);
+            }
+
+            return View("EmployeeDetails", emp); // View name: EmployeeDetails.cshtml
+        }
+
+
+
 
     }
-
-
 }
+
+
+

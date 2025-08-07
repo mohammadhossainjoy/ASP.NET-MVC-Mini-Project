@@ -181,6 +181,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Employee\NewEmployee.cshtml" />
     <Content Include="Views\Employee\EmployeeShow.cshtml" />
+    <Content Include="Views\Employee\EmployeeEdit.cshtml" />
+    <Content Include="Views\Employee\EmployeeDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

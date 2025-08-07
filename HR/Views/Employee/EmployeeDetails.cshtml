@@ -1,0 +1,46 @@
+﻿@model HR.Models.Employee
+
+@{
+    ViewBag.Title = "Employee Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <h2 class="text-center mb-4 text-primary">Employee Details</h2>
+
+            <div class="border rounded p-4 bg-light">
+                <dl class="row">
+                    <dt class="col-sm-4">Full Name</dt>
+                    <dd class="col-sm-8">@Model.FullName</dd>
+
+                    <dt class="col-sm-4">Job Title</dt>
+                    <dd class="col-sm-8">@Model.JobTitle</dd>
+
+                    <dt class="col-sm-4">Department</dt>
+                    <dd class="col-sm-8">@Model.Department</dd>
+
+                    <dt class="col-sm-4">Date of Birth</dt>
+                    <dd class="col-sm-8">@Model.DateOfBirth</dd>
+
+                    <dt class="col-sm-4">Email</dt>
+                    <dd class="col-sm-8">@Model.Email</dd>
+
+                    <dt class="col-sm-4">Phone</dt>
+                    <dd class="col-sm-8">@Model.Phone</dd>
+
+                    <dt class="col-sm-4">Address</dt>
+                    <dd class="col-sm-8">@Model.Address</dd>
+
+                    <dt class="col-sm-4">Join Date</dt>
+                    <dd class="col-sm-8">@Model.JoinDate</dd>
+                </dl>
+
+                <div class="text-center mt-4">
+                    @Html.ActionLink("Back", "EmployeeShow", "Employee", null, new { @class = "btn btn-secondary px-4" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
